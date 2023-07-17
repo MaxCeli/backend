@@ -6,6 +6,8 @@ import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USER } from './config/co
 import { TipoInstitucionModule } from './tipo-institucion/tipo-institucion.module';
 import { SeccionModule } from './seccion/seccion.module';
 import { EscuelaModule } from './escuela/escuela.module';
+import { ColegioModule } from './colegio/colegio.module';
+import { UniversidadModule } from './universidad/universidad.module';
 
 @Module({
   imports: [
@@ -28,7 +30,9 @@ import { EscuelaModule } from './escuela/escuela.module';
     }),
     TipoInstitucionModule,
     SeccionModule,
-    EscuelaModule
+    EscuelaModule,
+    ColegioModule,
+    UniversidadModule
   ],
   controllers: [],
   providers: [],
