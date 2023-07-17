@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import { EstudianteEntity } from 'src/estudiante/estudiante.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
 
 @Entity({name: 'seccion'})
 export class SeccionEntity {
@@ -9,5 +10,8 @@ export class SeccionEntity {
 
     @Column({ type: 'varchar' })
     nombre_seccion: string;
+
+    @OneToMany(() => EstudianteEntity, estudiante => estudiante.seccionId)
+    seccionId: EstudianteEntity[];
 
 }

@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import { EstudianteEntity } from 'src/estudiante/estudiante.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
 
 @Entity({name: 'escuela'})
 export class EscuelaEntity{
@@ -9,5 +10,8 @@ export class EscuelaEntity{
 
     @Column({ type: 'varchar' })
     nivel_escuela: string;
+
+    @OneToMany(() => EstudianteEntity, estudiante => estudiante.escuelaId)
+    escuelaId: EstudianteEntity[];
 
 }

@@ -8,6 +8,7 @@ import { SeccionModule } from './seccion/seccion.module';
 import { EscuelaModule } from './escuela/escuela.module';
 import { SectorModule } from './sector/sector.module';
 import { ModalidadModule } from './modalidad/modalidad.module';
+import { EstudianteModule } from './estudiante/estudiante.module';
 
 @Module({
   imports: [
@@ -32,7 +33,8 @@ import { ModalidadModule } from './modalidad/modalidad.module';
     SeccionModule,
     EscuelaModule,
     SectorModule,
-    ModalidadModule
+    ModalidadModule,
+    EstudianteModule
   ],
   controllers: [],
   providers: [],
