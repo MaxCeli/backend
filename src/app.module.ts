@@ -8,6 +8,9 @@ import { SeccionModule } from './seccion/seccion.module';
 import { EscuelaModule } from './escuela/escuela.module';
 import { ColegioModule } from './colegio/colegio.module';
 import { UniversidadModule } from './universidad/universidad.module';
+import { SectorModule } from './sector/sector.module';
+import { ModalidadModule } from './modalidad/modalidad.module';
+import { EstudianteModule } from './estudiante/estudiante.module';
 
 @Module({
   imports: [
@@ -32,7 +35,10 @@ import { UniversidadModule } from './universidad/universidad.module';
     SeccionModule,
     EscuelaModule,
     ColegioModule,
-    UniversidadModule
+    UniversidadModule,
+    SectorModule,
+    ModalidadModule,
+    EstudianteModule
   ],
   controllers: [],
   providers: [],

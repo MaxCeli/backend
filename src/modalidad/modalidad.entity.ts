@@ -2,16 +2,16 @@
 import { EstudianteEntity } from 'src/estudiante/estudiante.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
 
-@Entity({name: 'escuela'})
-export class EscuelaEntity{
+@Entity({name: 'modalidad'})
+export class ModalidadEntity {
 
     @PrimaryGeneratedColumn()
-    id_escuela: number;
+    id_modalidad: number;
 
     @Column({ type: 'varchar' })
-    nivel_escuela: string;
+    nombre_modalidad: string;
 
-    @OneToMany(() => EstudianteEntity, estudiante => estudiante.escuelaId)
-    escuelaId: EstudianteEntity[];
-
+    @OneToMany(() => EstudianteEntity, estudiante => estudiante.modalidadId)
+    modalidadId: EstudianteEntity[];
+    
 }
